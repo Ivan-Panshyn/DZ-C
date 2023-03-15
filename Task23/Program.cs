@@ -8,21 +8,21 @@
 Console.WriteLine("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 0) // уточнее если число больше 0
+if (number > 0) 
 {
   TableSquare(number);
 }
-else // показываем сообщение о невыполнение функии
+else 
 {
   Console.WriteLine("Введено некорректное число");
 }
 
-void TableSquare(int num) //создание метода
+void TableSquare(int num) 
 {
-  int i = 1; //указание типа
-  while (i <= num) //- счётчик
+  int i = 1;
+  while (i <= num)
   {
     Console.WriteLine($"{i, 4} -> {i * i * i, 4}");
-     i++; //увелечение счётчик на единицу
+     i++;
   }
 }
