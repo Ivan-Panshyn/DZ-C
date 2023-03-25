@@ -7,12 +7,14 @@
 int[] array = new int[8];
 
 FillArray(array);
+Console.Write("[");
 WriteArray(array);
+Console.Write("]");
 
 void FillArray(int[] arr)
 {
   Random rand = new Random();
-  for (int i = 0; i < arr.Length - 1; i++)
+  for (int i = 0; i < arr.Length; i++)
   {
     arr[i] = rand.Next(0, 99);
   }
@@ -20,12 +22,15 @@ void FillArray(int[] arr)
 
 void WriteArray(int[] arr)
 {
-  Console.Write("[");
-  for (int i = 0; i < arr.Length - 1; i++)
+  for (int i = 0; i < arr.Length; i++)
   {
-    Console.Write(arr[i] + "  ");
-    Console.Write($"{arr[arr.Length - 1]}");
+    if (i < arr.Length - 1)
+    {
+      Console.Write($"{arr[i]}, ");
+    }
+    else
+    {
+      Console.Write($"{arr[i]}");
+    }
   }
-  Console.Write($"{arr[arr.Length - 1]}");
-  Console.WriteLine("]");
 }
