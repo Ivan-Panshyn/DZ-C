@@ -5,12 +5,12 @@
 // [345, 897, 568, 234] -> 2
 
 Console.Write("Введите количество элементов массива: ");
-int a = Convert.ToInt32(Console.ReadLine());
-int[] randomArray = new int[a];
+int number = Convert.ToInt32(Console.ReadLine());
+int[] randomArray = new int[number];
 
-void mas(int a)
+void massive(int number)
 {
-  for (int i = 0; i < a; i++)
+  for (int i = 0; i < number; i++)
   {
     randomArray[i] = new Random().Next(99, 999);
     Console.Write(randomArray[i] + " ");
@@ -27,5 +27,5 @@ int kolichestvo(int[] randomArray)
   }
   return kolichestvo;
 }
-mas(a);
+massive(number);
 Console.Write($"Количество чётных чисел в массиве: {kolichestvo(randomArray)}");
